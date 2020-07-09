@@ -1,15 +1,23 @@
+import java.util.Random;
 
 public class Main {
 	public static void main(String[] args) {
-		boolean hare = true;
-		boolean ame = false;
-		boolean tenki = ame;
-
-		if(tenki == hare) {
-			System.out.println("洗濯します");
-			System.out.println("散歩をします");
-		} else if(tenki == ame) {
-			System.out.println("DVDを見ます");
+		System.out.println("あなたの運勢を占います");
+		int fortune = new Random().nextInt(3);
+		++fortune;
+		switch(fortune) {
+			case 1:
+				System.out.println("大吉");
+				break;
+			case 2:
+				System.out.println("中吉");
+				break;
+			case 3:
+				System.out.println("吉");
+				break;
+			default:
+				System.out.println("凶");
+				break;
 		}
 	}
 }
